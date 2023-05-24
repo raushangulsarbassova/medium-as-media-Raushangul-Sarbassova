@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium as media</title>
+    <link rel="stylesheet" href="medium.css">
+</head>
+<body>
+    <p class="medium_alike">medium alike</p>
+    <h1 class="hello_world">Hello, world!</h1>
+
+    <div id="articleList">
+        <ul id="articles"></ul>
+    </div>
+    
+
+    <form class="new-article-form">
+        <h2>Add New Article</h2>
+        <label for="authorName">Author Name:</label>
+        <input type="text" id="authorName" required>
+        <label for="articleDate">Article Date:</label>
+        <input type="date" id="articleDate" required>
+        <label for="articleTitle">Article Title:</label>
+        <input type="text" id="articleTitle" required>
+        <label for="articleHeader">Article Header:</label>
+        <input type="text" id="articleHeader" required>
+        <label for="articleSubheader">Article Subheader:</label>
+        <input type="text" id="articleSubheader" required>
+        <label for="articleContent">Article Content:</label>
+        <textarea id="articleContent" rows="6" required></textarea>
+        <button type="submit" onclick="submitArticle()">Submit</button>
+      </form> 
+      <p class = "credits">Credits: photos from  <u>Unsplash.com</u>, icons from  <u>Icons8</u>, graphics from  <u>craftwork.design</u>.</p>
+      <p class = "made_w_love">Made with ✨❤️ at nFactorial in 2022.</p>
+    <script src="script.js"></script>
+</body>
+</html>
