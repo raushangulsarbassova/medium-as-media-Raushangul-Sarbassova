@@ -17,7 +17,7 @@ const articles = [
     author: "rosie",
     topicsName: "topic",
     readTime:"12 min read",
-    image:"./Img (2).png",
+    image:"./Img2.png",
   },
   {
     title: '3 CSS practical tips',
@@ -27,7 +27,7 @@ const articles = [
     author: "rosie",
     topicsName: "topic",
     readTime:"12 min read",
-    image:"./Img (3).png",
+    image:"./Img3.png",
   }
 ]
 
