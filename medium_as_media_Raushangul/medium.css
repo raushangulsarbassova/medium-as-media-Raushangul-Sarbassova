@@ -1,313 +1,191 @@
-/* Add your existing CSS styles here */
 @import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Inter");
 
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  height: auto; 
-  width: 100%;
-  background-color: #f1f1f1;
-  overflow-x: hidden;
+body{
+    display:flex;
+    flex-direction: column;
+    height:2338px;
+    width:100%;
+    background-color: #F1F1F1;;
 }
-
-ul { list-style: none; }
-
 .article {
-  position: relative;
-  box-sizing: border-box;
-  width: 1120px;
-  margin-bottom: 45px;
-}
-
-.left {
-  width: calc(755px - 265px);
-  height: 274px;
-  display: flex;
-  flex-direction: column;
-}
-
-.right {
-  width: 265px;
-  height: 265px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.info_bottom {
-  width: calc(755px - 265px);
-  height: 30px;
-  margin-top: 10px;
-  position: relative;
-}
-
-.info_bottom::after {
-  content: "";
-  position: absolute;
-  bottom: -18px;
-  left: 0;
-  width: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.centered-hr {
-  margin: 0 auto;
-  width: 100%;
-}
-.medium_alike {
+    box-sizing: border-box;
     width: 1120px;
-    height: 22px;
-    font-family: "Kanit", sans-serif;
+    margin-left: 152px;
+    margin-right: 152px;
+    display: flex;
+    justify-content: space-between;
+}
+.info_bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 755px;
+    height: 30px;
+    margin-top: 70px;
+    margin-bottom: 36px; /* Adjusted margin-bottom to 36px */
+    position: relative; /* Added position property */
+}
+  
+.info_bottom::after {
+    margin-left: 180px;
+    margin-right: 180px;
+    content: "";
+    position: absolute; /* Added position property */
+    bottom: -18px; /* Adjusted bottom position to half of the desired spacing (36px / 2) */
+    left: 50%; /* Center the line horizontally */
+    transform: translateX(-50%); /* Center the line horizontally */
+    width: 1140px; /* Set the width to 1120px */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+  
+.medium_alike{
+    width: 1120px;
+    height: 22px;   
+    font-family: 'Kanit';
+    font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
-    margin-top: 19px;
-  }
-  
-  .hello_world {
-    font-family: "Kanit", sans-serif;
+    margin-top:19px;
+    margin-left:152px;
+    margin-right:152px;
+}
+.hello_world{
+    font-family: 'Kanit';
+    font-style: normal;
     font-weight: 500;
     font-size: 48px;
     line-height: 120px;
     width: 1120px;
     height: 120px;
-    margin-top: 68px;
-    margin-bottom: 64px;
-  }
-  
-  .info_top {
+    margin-top:68px;
+    margin-left:152px;
+    margin-right:152px;
+    margin-bottom:64px;
+}
+.info_top{
     display: flex;
     flex-direction: row;
     width: 285px;
     height: 24px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     padding: 0px;
     gap: 4px;
-  }
-  
-  .icon_author {
+}
+.img_author{
     width: 24px;
     height: 24px;
-  }
-  
-  .authors_name,
-  .dot, .dot2 {
-    font-family: "Inter", sans-serif;
+}
+.authors_name{  
+    font-family: 'Inter';
+    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
-    margin: 0;
-  }
-
-  .dot{
-    margin-right: 5px;
-    margin-left: 5px;
-    color: grey;
-  }
-
-  .dot2{
-    margin-right: 5px;
-    margin-left: 5px;
-  }
-
-  .date{
-    color: grey;
-  }
-  
-  .text_info_top {
+}
+.dot{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+}
+.text_info_top{
     display: flex;
-    margin-bottom: 3px;
-    margin-top: 3px;
-  }
-  
-  .left {
-    width: calc(755px - 265px);
+    margin-bottom:3px;
+    margin-top:3px;
+}
+.left{
+    width: 755px;
     height: 274px;
-  }
-  
-  .text {
+}
+.text{
     width: 693px;
     height: 168px;
-    margin-bottom: 70px;
-  }
-  
-  .article_name {
-    font-family: "Inter", sans-serif;
+    margin-bottom: 70px;;
+}
+.article_name{
+    font-family: 'Inter';
+    font-style: normal;
     font-weight: 700;
     font-size: 28px;
     line-height: 34px;
     margin-top: 48px;
-  }
-  
-  .content_article {
-    font-family: "Inter", sans-serif;
+}
+.content_article{
+    font-family: 'Inter';
+    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     width: 693px;
     height: 110px;
-    margin-top: 10px;
-  }
-  
-  .java_script {
+    margin-top:10px;
+}
+
+.java_script{
     border-radius: 100px;
     width: 107px;
     height: 30px;
-    background: linear-gradient(
-      0deg,
-      rgba(8, 30, 52, 0.12),
-      rgba(8, 30, 52, 0.12)
-    ),
-    linear-gradient(0deg, #fffbfe, #fffbfe);
-    color: #081e34;
+    background: linear-gradient(0deg, rgba(8, 30, 52, 0.12), rgba(8, 30, 52, 0.12)),
+linear-gradient(0deg, #FFFBFE, #FFFBFE);
+    color:#081E34;
     border: none;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter';
+    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
-  }
-  
-  .desc {
-    font-family: "Inter", sans-serif;
+}
+.desc{
+    font-family: 'Inter';
+    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
     color: #000000;
     opacity: 0.5;
-  }
-  
-  .info {
+}
+.info{
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     width: 330px;
     height: 30px;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     padding: 0px;
     gap: 8px;
-  }
-  
-  .actions {
+    }
+.actions{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
     gap: 14px;
-    width: 100px;
-    height: 24px;
-  }
-  
-  .icons {
+
+width: 100px;
+height: 24px;
+}
+.icons{
     width: 24px;
     height: 24px;
-  }
-  
-  .img {
+}
+.img{
     width: 265px;
     height: 265px;
-  }
-  
-  .right {
+}
+.right{
     width: 265px;
     height: 265px;
-    margin-left: 100px;
-    margin-bottom: 45px;
-    display: flex;
-  }
-  
-  .credits {
-    width: 1120px;
-    height: 38px;
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: flex-end;
-    color: #081e34;
-    opacity: 0.5;
-    margin-top: 50px;
-  }
-  
-  .made_w_love {
-    width: 248px;
-    height: 18px;
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #081e34;
-    margin-top: 28px;
-  }
-  
-  .credits u {
-    margin-left: 4px;
-  }
-
-  .icon_author {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    margin-right: 4px;
-  }
-  
-  .new-article-form {
-    width: 800px;
-    padding: 40px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    overflow-y: scroll;
-  }
-  
-  .new-article-form h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .new-article-form label {
-    display: block;
-    margin-bottom: 8px;
-  }
-  
-  .new-article-form input[type="text"], .new-article-form input[type="date"],
-  .new-article-form textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 16px;
-  }
-  
-  .new-article-form button[type="submit"] {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .new-article-form button[type="submit"]:hover {
-    background-color: #45a049;
-  }
-
-  .credits{
+    margin-left:100px;
+    margin-bottom:45px;
+    display:flex;
+}
+.credits{
     width: 608px;
     height: 38px;
     font-family: 'Inter';
@@ -326,7 +204,7 @@ ul { list-style: none; }
 
     margin-left: 645px;
     margin-right: 152px;
-    margin-top: 785px;
+    margin-top: 585px;
 }
 .made_w_love{
     width: 248px;
@@ -346,7 +224,7 @@ ul { list-style: none; }
     text-align: center;
 
     color: #081E34;
-    margin-left: 850px;
+    margin-left: 1010px;
     margin-top: 28px;
 }
 .credits u {
