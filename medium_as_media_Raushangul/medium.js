@@ -1,57 +1,32 @@
-const articles = [
-  {
-    title: '1 CSS practical tips',
-    caption:"You not only learn more Python by implementing what you already know but, in the end, you can see how all your hard work pays off.",
-    topic: "Java Script",
-    date: "7 July",
-    author: "rosie",
-    topicsName: "topic",
-    readTime:"12 min read",
-    image:"./Img.png",
-  },
-  {
-    title: '2 CSS practical tips',
-    caption:"You not only learn more Python by implementing what you already know but, in the end, you can see how all your hard work pays off.",
-    topic: "Java Script",
-    date: "7 July",
-    author: "rosie",
-    topicsName: "topic",
-    readTime:"12 min read",
-    image:"./Img2.png",
-  },
-  {
-    title: '3 CSS practical tips',
-    caption:"You not only learn more Python by implementing what you already know but, in the end, you can see how all your hard work pays off.",
-    topic: "Java Script",
-    date: "7 July",
-    author: "rosie",
-    topicsName: "topic",
-    readTime:"12 min read",
-    image:"./Img3.png",
+const apiKey = 'sI5EQ0VjSfKgqWMQACyp4FO7Uuipkpng';
+const getTopStories = async () => {
+  const response = await fetch(`https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=${apiKey}`);
+  if(!response.ok && response.status==='404'){
+    console.log('запрос составлен неправильно!')
   }
-]
+  const articles = await response.json();
+  console.log(articles);
+  const articleDiv = document.getElementById("articles");
 
-const articleDiv = document.getElementById("articles");
-
-articles.map((item) => {
+articles.results.map((item) => {
   const html = `
   <section class = "article" style = "margin-bottom: 100px; margin-left: 152px;">
   <div class = "left">
       <div class = "info_top">
           <img class = "img_author" src = "./Img (1).png"/>
-          <p class = "authors_name">${item.author}</p>
+          <p class = "authors_name">${item.byline}</p>
           <p class = "desc">in</p> 
-          <p class = "authors_name">${item.topicsName}</p>
+          <p class = "authors_name">${item.section}</p>
           <p class = "dot">·</p>
-          <p class = "desc">${item.date}</p>
+          <p class = "desc">${item.published_date}</p>
       </div>
       <div class = "text post">
           <p class = "article_name post-title topic" data-href="medium2.html">${item.title}</p>
-          <p class = "content_article post-description"> ${item.caption}</p>
+          <p class = "content_article post-description"> ${item.abstract}</p>
       </div>
       <div class = "info_bottom">
           <div class = "info">
-              <button class = "java_script">${item.topic}</button>
+              <button class = "java_script">${item.subsection}</button>
               <p class = "desc">${item.readTime}</p>
               <p class = "desc">·</p>
               <p class = "desc">Selected for you</p>
@@ -69,3 +44,5 @@ articles.map((item) => {
   </section>`;
   articleDiv.innerHTML += html;
 });
+}
+getTopStories();
